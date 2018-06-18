@@ -1,0 +1,8 @@
+<map id="map" 
+    include-points="{{markers}}" 
+    scale="14" 
+    markers="{{markers}}" 
+    bindmarkertap="markertap" 
+    show-location 
+    style="width: 100%; height: 300px;">
+</map>
