@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "chat": "plugin://chatbot/chat",
+    "mp-form-page": "weui-miniprogram/form-page/form-page",
+    "mp-form": "weui-miniprogram/form/form",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-loading": "weui-miniprogram/loading/loading"
+  }
+}

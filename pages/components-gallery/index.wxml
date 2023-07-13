@@ -1,0 +1,10 @@
+<button
+  class="btn"
+  type="primary"
+  loading="{{loading}}"
+  disabled="{{disabled}}"
+  bindtap="onTap"
+>
+  picker
+</button>
+

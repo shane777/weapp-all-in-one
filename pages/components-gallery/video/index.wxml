@@ -1,0 +1,16 @@
+<view wx:for="{{ [1,2,3,4,5]}}">
+  <image class="feed" src="{{testImage}}" />
+</view>
+
+<block wx:for="{{videoList}}" key="id">
+  <video-post
+    videoItem="{{item}}"
+    isHidden="{{ videoFullScreenHidden }}"
+    bind:screenChange="onVideoScreenChange"
+  ></video-post>
+</block>
+
+<view wx:for="{{ [1,2]}}">
+  <image class="feed" src="{{testImage}}" />
+</view>
+

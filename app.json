@@ -1,15 +1,29 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/userinfo/info-input",
     "pages/map/map",
-    "pages/media/image",  
-    "pages/gesture/gesture",   
-    "pages/logs/logs"
+    "pages/media/image",
+    "pages/gesture/gesture",
+    "pages/logs/logs",
+    "pages/components-gallery/index",
+    "pages/components-gallery/picker/index",
+    "pages/components-gallery/video/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "plugins": {
+    "chatbot": {
+      "version": "1.3.3",
+      "provider": "wx8c631f7e9f2465e1"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarTextStyle": "black"
+  },
+    "useExtendedLib": {
+      "weui": true
+    }
+  
 }

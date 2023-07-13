@@ -58,17 +58,22 @@ Page({
     })
   },
   otherProgram: function(){
-    wx.navigateToMiniProgram({
-      appId: 'wx3a3d4307728aeb53',
-      path: 'pages/search/search?id=123',
-      extraData: {
-        foo: 'bar'
-      },
-      envVersion: 'trial',
-      success(res) {
-        console.log(res);
+    wx.login({
+      success (res) {
+        console.log('res: ', res.code);
       }
     })
+    // wx.navigateToMiniProgram({
+    //   appId: 'wx3a3d4307728aeb53',
+    //   path: 'pages/search/search?id=123',
+    //   extraData: {
+    //     foo: 'bar'~
+    //   },
+    //   envVersion: 'trial',
+    //   success(res) {
+    //     console.log(res);
+    //   }
+    // })
   },
   navigateTo(e){
     wx.navigateTo({
