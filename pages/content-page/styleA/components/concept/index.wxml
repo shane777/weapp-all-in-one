@@ -1,0 +1,17 @@
+<view class="w100 color-white bg-black" style="min-height: 200vw;">
+  <view id="text" class="ph40 pb40">
+    <view class="h1 title-animation {{ isTextShow? 'text-end': 'text-start' }}">{{ content.title1 }}</view>
+    <view class="relative" style="left:120rpx">
+      <view class="h1 title-animation title2-delay {{ isTextShow? 'text-end': 'text-start' }}">{{ content.title2 }}</view>
+      <view class="body-text-2 pt16 subtitle-animation {{ isTextShow? 'text-end': 'text-start' }}">{{ content.subTitle }}</view>
+      <view class="body-text-2 pt4 subtitle-animation {{ isTextShow? 'text-end': 'text-start' }}">{{ content.subTitle2 }}</view>
+    </view>
+  </view>
+  <image
+    id="image"
+    src="{{content.background}}"
+    class="w100 image-start {{ isImageShow? 'image-animation':'' }}"
+    style="height:100vw;"
+  />
+</view>
+

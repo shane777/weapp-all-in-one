@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/content-page/styleA/index",
+          "pathName": "pages/content-page/styleA/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "",
           "pathName": "pages/userinfo/info-input",
           "query": "",

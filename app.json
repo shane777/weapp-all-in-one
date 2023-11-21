@@ -8,7 +8,8 @@
     "pages/logs/logs",
     "pages/components-gallery/index",
     "pages/components-gallery/picker/index",
-    "pages/components-gallery/video/index"
+    "pages/components-gallery/video/index",
+    "pages/content-page/styleA/index"
   ],
   "plugins": {
     "chatbot": {
@@ -20,7 +21,8 @@
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
   },
     "useExtendedLib": {
       "weui": true

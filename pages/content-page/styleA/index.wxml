@@ -1,0 +1,10 @@
+<product-hero
+  heroContent="{{ heroContent }}"
+  blurScale="{{blurScale}}"
+  heroOverlayOpacity="{{heroOverlayOpacity}}"
+  windowHeight="{{windowHeight}}"
+> </product-hero>
+<view class="relative content-wrapper">
+  <concept content="{{ mockConcept }}"></concept>
+</view>
+

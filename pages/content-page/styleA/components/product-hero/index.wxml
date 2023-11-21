@@ -1,0 +1,17 @@
+<view class="relative hero-container" style="height:{{ windowHeight + 100 }}px">
+  <image
+    src="{{ heroContent.backgroundUrl }}"
+    class="fixed w100"
+    style="height:{{ windowHeight }}px"
+    mode="aspectFill"
+  />
+  <view class="absolute w100 overlay" style="height:{{ windowHeight + 100 }}px; opacity: {{ heroOverlayOpacity }};"></view>
+  <view class="w100" style="height:{{ windowHeight + 100 }}px; backdrop-filter: blur({{blurScale}}px)"></view>
+  <view class="bottom-gradient absolute w100"></view>
+  <view class="hero-content absolute color-white w100 ph16 border-box">
+    <view class="h1">{{heroContent.title1}}</view>
+    <view class="h1 mt4">{{heroContent.title2}}</view>
+    <view class="body-text-2 mt8 mb24">{{heroContent.description}}</view>
+  </view>
+</view>
+

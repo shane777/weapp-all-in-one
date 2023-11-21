@@ -20,7 +20,7 @@
   <view class="usermotto">
     <text class="user-motto" bindtap='otherProgram'>{{motto}}</text>
   </view>
-  <view bindtap="navigateTo" data-url="/pages/media/image">API测试</view>
+  <view bindtap="navigateTo" data-url="/pages/content-page/styleA/index">API测试</view>
   <view bindtap="navigateTo" data-url="/pages/userinfo/info-input">MapAPI测试</view>
 </view>
 
