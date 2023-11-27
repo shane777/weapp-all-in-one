@@ -5,6 +5,7 @@
   "disableScroll": false,
   "usingComponents": {
     "concept": "./components/concept/index",
-    "product-hero": "./components/product-hero/index"
+    "product-hero": "./components/product-hero/index",
+    "image-content":"./components/image-content/index"
   }
 }

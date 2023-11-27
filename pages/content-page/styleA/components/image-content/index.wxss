@@ -1,0 +1,8 @@
+.swiper-image{
+    width: 670rpx;
+    height: 1000rpx;
+}
+
+.split{
+    border-bottom: 1px solid var(--mc-dark-grey);
+}

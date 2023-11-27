@@ -1,0 +1,56 @@
+<view class="w100 color-white bg-black relative pb40">
+  <view class="h2 mb8 ph20 pt40"> {{content.title}}</view>
+  <view class="body-text-2 ph20 pb40 color-light-grey">{{ content.subTitle}}</view>
+  <block wx:if="{{ content.carousel && content.carousel[0].backgroundUrl }}">
+    <swiper
+      indicator-dots="{{true}}"
+      autoplay="{{true}}"
+      interval="{{5000}}"
+      duration="{{500}}"
+      class="w100"
+      style="height:1000rpx;"
+      next-margin="40rpx"
+      previous-margin="40rpx"
+      circular
+    >
+      <block wx:for="{{content.carousel}}" wx:key="backgroundUrl">
+        <swiper-item>
+          <image
+            class="swiper-image mh8"
+            src="{{item.backgroundUrl}}"
+            mode="aspectFill"
+          />
+        </swiper-item>
+      </block>
+    </swiper>
+  </block>
+  <block wx:else>
+    <image
+      src="{{content.backgroundUrl}}"
+      class="w100"
+      style="height: 1028rpx;"
+      mode="aspectFill"
+    />
+    <view
+      wx:if="{{content.cta}}"
+      class=" btn outlined absolute"
+      style="bottom: 120rpx;"
+    >{{ content.cta.text }}
+    </view>
+    <view
+      wx:elif="{{content.highlights}}"
+      class="absolute ph20 w100 border-box"
+      style="bottom: 190rpx"
+    >
+      <view
+        wx:for="{{content.highlights}}"
+        wx:key="title"
+        class="pv20 split flex flex-column"
+      >
+        <view class="h1 mb4">{{ item.title }}</view>
+        <view class="body-text-1">{{ item.body }}</view>
+      </view>
+    </view>
+  </block>
+</view>
+

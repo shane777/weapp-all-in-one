@@ -7,4 +7,7 @@
 <view class="relative content-wrapper">
   <concept content="{{ mockConcept }}"></concept>
 </view>
+<block wx:for="{{imageContent}}" wx:key="title">
+  <image-content content="{{item}}" />
+</block>
 

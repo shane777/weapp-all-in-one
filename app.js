@@ -1,6 +1,4 @@
 //app.js
-
-
 App({
   globalData: {
     systemInfo: null

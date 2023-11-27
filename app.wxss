@@ -36,7 +36,7 @@ page {
 }
 
 .bg-black {
-  background-color: var(--bc-blue-ribbon-black);
+  background-color: var(--mc-black);
 }
 
 .bg-black-grey {
@@ -719,6 +719,11 @@ page {
 }
 
 .pb40 {
+  padding-bottom: 80rpx;
+}
+
+.pv40{
+  padding-top: 80rpx;
   padding-bottom: 80rpx;
 }
 

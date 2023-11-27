@@ -1,4 +1,4 @@
-<view class="w100 color-white bg-black" style="min-height: 200vw;">
+<view class="w100 color-white bg-black">
   <view id="text" class="ph40 pb40">
     <view class="h1 title-animation {{ isTextShow? 'text-end': 'text-start' }}">{{ content.title1 }}</view>
     <view class="relative" style="left:120rpx">
