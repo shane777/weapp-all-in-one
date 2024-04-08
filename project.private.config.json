@@ -35,9 +35,16 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/components-gallery/rate/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }
   },
-  "libVersion": "2.32.3"
+  "libVersion": "3.3.4"
 }

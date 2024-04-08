@@ -31,6 +31,10 @@ page {
   --fw-regular: 400;
 }
 
+.my-cells {
+  width: 100vw;
+}
+
 .transparent{
   opacity: 0;
 }

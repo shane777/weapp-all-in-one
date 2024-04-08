@@ -1,0 +1,12 @@
+{
+  "presets": [
+    [
+      "./build_tools/mp_babel_preset.js",
+      {
+        "wechatLibVersion": "2.25.4",
+        "useBuiltIns": "usage",
+        "modules": "cjs"
+      }
+    ]
+  ]
+}

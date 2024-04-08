@@ -4,11 +4,11 @@
     "pages/userinfo/info-input",
     "pages/map/map",
     "pages/media/image",
-    "pages/gesture/gesture",
     "pages/logs/logs",
     "pages/components-gallery/index",
     "pages/components-gallery/picker/index",
     "pages/components-gallery/video/index",
+    "pages/components-gallery/rate/index",
     "pages/content-page/styleA/index"
   ],
   "plugins": {

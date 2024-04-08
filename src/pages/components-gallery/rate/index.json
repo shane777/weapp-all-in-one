@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "rate": "./rate-star/index"
+  }
+}

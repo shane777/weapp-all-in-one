@@ -1,0 +1,33 @@
+<view class="feed relative">
+  <view
+    id="{{'wrapper' + videoItem.id}}"
+    class="absolute"
+    style="width:0.5px; height: 0.5px; bottom: 50%;"
+  ></view>
+  <cover-view
+    wx:if="{{videoDisplay.showContinueButton}}"
+    class="feed video-cover flex flex-center absolute"
+    style="z-index:99;"
+    catch:tap="onContinueVideoClick"
+    id="test"
+  >
+    <cover-view class="color-white">继续观看完整视频</cover-view>
+  </cover-view>
+  <video
+    id="{{videoItem.id}}"
+    class="feed"
+    show-play-btn="{{videoDisplay.showControl}}"
+    loop="{{true}}"
+    poster="{{ videoItem.poster }}"
+    controls="{{ videoDisplay.showControl }}"
+    enable-progress-gesture="{{videoDisplay.showControl}}"
+    object-fit="cover"
+    bindended="onVideoEnd"
+    bindtimeupdate="onVideoTimeUpdate"
+    bindfullscreenchange="onVideoScreenChange"
+    src="{{videoItem.url}}"
+    muted="{{true}}"
+    show-mute-btn="{{true}}"
+  />
+</view>
+

@@ -1,0 +1,23 @@
+<view class="rate mt24">
+  <view
+    class="rate__item"
+    wx:for="{{values}}"
+    wx:key="{{index}}"
+  >
+    <view id="star-{{index}}" class="rate__item--icon icon-{{iconClassMap[item]}}">
+      <view
+        bindtap="clickOnStar"
+        bind:touchmove="moveOnStar"
+        data-index="{{index}}"
+        data-position="{{POSITION.LEFT}}"
+      ></view>
+      <view
+        bindtap="clickOnStar"
+        bind:touchmove="moveOnStar"
+        data-index="{{index}}"
+        data-position="{{POSITION.RIGHT}}"
+      ></view>
+    </view>
+  </view>
+</view>
+
