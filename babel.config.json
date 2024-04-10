@@ -5,7 +5,6 @@
       {
         "wechatLibVersion": "2.25.4",
         "useBuiltIns": "usage",
-        "modules": "cjs"
       }
     ]
   ]
