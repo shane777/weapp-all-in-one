@@ -12,9 +12,13 @@
     "@babel/cli": "^7.24.1",
     "@babel/core": "^7.24.3",
     "@babel/helper-plugin-utils": "^7.24.0",
+    "@babel/plugin-transform-runtime": "^7.24.3",
     "@babel/preset-env": "^7.24.3",
     "core-js-compat": "^3.36.1",
     "miniprogram-compat": "^1.0.3",
     "semver": "^7.6.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.24.4"
   }
 }

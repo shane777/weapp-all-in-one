@@ -4,8 +4,8 @@
       "./build_tools/mp_babel_preset.js",
       {
         "wechatLibVersion": "2.25.4",
-        "useBuiltIns": "usage",
       }
     ]
-  ]
+  ],
+  "plugins": ["@babel/plugin-transform-runtime"]
 }
