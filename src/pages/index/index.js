@@ -1,6 +1,17 @@
 //index.js
 //获取应用实例
 const app = getApp()
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+import 'dayjs/locale/zh-cn'
+
+dayjs.extend(relativeTime)
+dayjs.locale('zh-cn')
+
+const now = dayjs()
+console.log(now.format('YYYY-MM-DD HH:mm:ss'))
+console.log(now.fromNow())
+
 
 Page({
   data: {

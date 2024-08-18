@@ -2,23 +2,17 @@
   "name": "weapp-all-in-one",
   "version": "1.0.0",
   "description": "小程序 ts 包地址",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Shane Zhang",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/cli": "^7.24.1",
-    "@babel/core": "^7.24.3",
-    "@babel/helper-plugin-utils": "^7.24.0",
-    "@babel/plugin-transform-runtime": "^7.24.3",
-    "@babel/preset-env": "^7.24.3",
-    "core-js-compat": "^3.36.1",
-    "miniprogram-compat": "^1.0.3",
-    "semver": "^7.6.0"
-  },
   "dependencies": {
-    "@babel/runtime": "^7.24.4"
+    "dayjs": "^1.11.12"
+  },
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   }
 }
