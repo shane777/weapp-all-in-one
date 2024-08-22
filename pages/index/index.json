@@ -1,4 +1,5 @@
 {
   "usingComponents": {
+    "test-view": "../components/test-view/index"
   }
 }

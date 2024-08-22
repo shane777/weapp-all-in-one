@@ -1,0 +1,19 @@
+{
+  "name": "weapp-all-in-one",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "Shane Zhang",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "glob-promise": "^6.0.7",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
