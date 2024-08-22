@@ -1,3 +1,0 @@
-<view>
-    <image src="{{imageUrls[0]}}" bindtap="preViewImage"></image>
-</view>

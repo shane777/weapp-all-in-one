@@ -1,83 +1,49 @@
-//index.js
-//获取应用实例
-const app = getApp()
+// index.js
+const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
 
 Page({
   data: {
     motto: 'Hello World',
-    userInfo: {},
+    userInfo: {
+      avatarUrl: defaultAvatarUrl,
+      nickName: '',
+    },
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUseGetUserProfile: wx.canIUse('getUserProfile'),
+    canIUseNicknameComp: wx.canIUse('input.type.nickname'),
   },
-  //事件处理函数
-  bindViewTap: function() {
+  bindViewTap() {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-    wx.getSystemInfo({
-      success(res){
+  onChooseAvatar(e) {
+    const { avatarUrl } = e.detail
+    const { nickName } = this.data.userInfo
+    this.setData({
+      "userInfo.avatarUrl": avatarUrl,
+      hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
+    })
+  },
+  onInputChange(e) {
+    const nickName = e.detail.value
+    const { avatarUrl } = this.data.userInfo
+    this.setData({
+      "userInfo.nickName": nickName,
+      hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
+    })
+  },
+  getUserProfile(e) {
+    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+    wx.getUserProfile({
+      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
         console.log(res)
-        console.log(res.screenHeight - res.windowHeight, "  status:", res.statusBarHeight);
-      }
-    });
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
         })
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
     })
   },
-  otherProgram: function(){
-    wx.login({
-      success (res) {
-        console.log('res: ', res.code);
-      }
-    })
-    // wx.navigateToMiniProgram({
-    //   appId: 'wx3a3d4307728aeb53',
-    //   path: 'pages/search/search?id=123',
-    //   extraData: {
-    //     foo: 'bar'~
-    //   },
-    //   envVersion: 'trial',
-    //   success(res) {
-    //     console.log(res);
-    //   }
-    // })
-  },
-  navigateTo(e){
-    wx.navigateTo({
-      url: e.currentTarget.dataset.url
-    })
-  }
 })
