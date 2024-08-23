@@ -1,0 +1,11 @@
+{
+  "name": "weapp-all-in-one",
+  "version": "1.0.0",
+  "description": "Build a template project to spike the building tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
