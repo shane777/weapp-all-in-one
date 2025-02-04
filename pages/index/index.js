@@ -1,4 +1,7 @@
 //index.js
+
+import { userAuth } from "../../utils/request/auth";
+
 //获取应用实例
 const app = getApp()
 
@@ -47,7 +50,9 @@ Page({
           })
         }
       })
+
     }
+    this.testAuth()
   },
   getUserInfo: function(e) {
     console.log(e)
@@ -56,6 +61,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  testAuth: async function () {
+    const startTime = Date.now()
+   const res =  await userAuth()
+   console.log(res, Date.now() - startTime)
   },
   otherProgram: function(){
     wx.login({

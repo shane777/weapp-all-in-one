@@ -1,9 +1,18 @@
+import { EventBus } from './utils/tools/eventbus'
+
 //app.js
 App({
   globalData: {
     systemInfo: null
   },
   onLaunch: function () {
+    wx.bus = new EventBus()
+    wx.bus.on(
+      "login",
+      (res)=> {
+        console.log('==', res)
+      }
+    )
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -24,6 +33,9 @@ App({
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
+                setTimeout(()=> {
+                  wx.bus.emit("login", this,{ info: res.userInfo})
+                }, 2000)
               }
             }
           })
@@ -31,6 +43,7 @@ App({
       }
     })
   },
+  
   globalData: {
     userInfo: null
   }
